@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "cb1008651585a57c03485548d11cc8b9"
+build_time: [501642319, 734012000]
+inputs:
+  "/Users/rongomes/Documents/projects/iphone/samples/Sample-Camera/Sample-Camera/AppDelegate.swift": [501642233, 0]
+  "/Users/rongomes/Documents/projects/iphone/samples/Sample-Camera/Sample-Camera/CameraViewController.swift": [501642292, 0]
