@@ -6,39 +6,39 @@ provides-nominal:
 provides-member:
 - ["C13Sample_Camera20CameraViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "selectPhoto"
 - "imagePickerControllerDidCancel"
-- "imagePickerController"
 - "takePhoto"
+- "selectPhoto"
+- "viewDidLoad"
+- "imagePickerController"
 depends-top-level:
-- "String"
-- !private "UIControlEvents"
-- !private "UIColor"
-- !private "UIButtonType"
 - "UIButton"
-- !private "Dictionary"
+- !private "UIAlertController"
+- !private "BooleanLiteralType"
+- !private "UIImagePickerControllerOriginalImage"
+- "UIView"
 - "UIViewController"
+- "String"
 - "UIImage"
+- "UIImagePickerControllerDelegate"
+- !private "NSLayoutConstraint"
 - "UINavigationControllerDelegate"
 - !private "UIAlertControllerStyle"
-- "UIImagePickerControllerDelegate"
-- !private "BooleanLiteralType"
-- "UIView"
-- !private "NSLayoutConstraint"
-- "AnyObject"
-- "UICollectionView"
-- !private "UIAlertController"
-- !private "NSLayoutRelation"
-- !private "UIControlState"
-- !private "UIImagePickerControllerOriginalImage"
-- !private "NSLayoutAttribute"
-- !private "UIAlertAction"
-- !private "StringLiteralType"
-- "UIImagePickerController"
 - !private "UIAlertActionStyle"
+- "UIImagePickerController"
+- !private "UIButtonType"
+- !private "StringLiteralType"
+- !private "Dictionary"
+- "UICollectionView"
+- "AnyObject"
+- !private "UIAlertAction"
+- !private "UIColor"
+- !private "NSLayoutRelation"
 - "UIImageView"
+- !private "UIControlState"
+- !private "UIControlEvents"
 - "CameraViewController"
+- !private "NSLayoutAttribute"
 depends-member:
 - !private ["PSs9AnyObject", "CGColor"]
 - !private ["PSs9AnyObject", "NSLayoutAttribute"]
@@ -64,10 +64,13 @@ depends-member:
 - !private ["PSs9AnyObject", "allowsEditing"]
 - !private ["PSs9AnyObject", "backgroundColor"]
 - !private ["PSs9AnyObject", "blackColor"]
+- !private ["PSs9AnyObject", "blueColor"]
 - !private ["PSs9AnyObject", "borderColor"]
 - !private ["PSs9AnyObject", "borderWidth"]
 - ["PSs9AnyObject", "buttonsPanel"]
 - ["PSs9AnyObject", "choosePhotoButton"]
+- !private ["PSs9AnyObject", "clipsToBounds"]
+- !private ["PSs9AnyObject", "cornerRadius"]
 - !private ["PSs9AnyObject", "delegate"]
 - !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
 - !private ["PSs9AnyObject", "grayColor"]
@@ -100,8 +103,10 @@ depends-member:
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
 - !private ["CSo7CALayer", "borderColor"]
 - !private ["CSo7CALayer", "borderWidth"]
+- !private ["CSo7CALayer", "cornerRadius"]
 - !private ["PSo13CAMediaTiming", "borderColor"]
 - !private ["PSo13CAMediaTiming", "borderWidth"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["PSs11CVarArgType", "CGColor"]
 - !private ["PSs11CVarArgType", "NSLayoutAttribute"]
@@ -127,10 +132,13 @@ depends-member:
 - !private ["PSs11CVarArgType", "allowsEditing"]
 - !private ["PSs11CVarArgType", "backgroundColor"]
 - !private ["PSs11CVarArgType", "blackColor"]
+- !private ["PSs11CVarArgType", "blueColor"]
 - !private ["PSs11CVarArgType", "borderColor"]
 - !private ["PSs11CVarArgType", "borderWidth"]
 - ["PSs11CVarArgType", "buttonsPanel"]
 - ["PSs11CVarArgType", "choosePhotoButton"]
+- !private ["PSs11CVarArgType", "clipsToBounds"]
+- !private ["PSs11CVarArgType", "cornerRadius"]
 - !private ["PSs11CVarArgType", "delegate"]
 - !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
 - !private ["PSs11CVarArgType", "grayColor"]
@@ -233,10 +241,13 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "allowsEditing"]
 - !private ["PSs23CustomStringConvertible", "backgroundColor"]
 - !private ["PSs23CustomStringConvertible", "blackColor"]
+- !private ["PSs23CustomStringConvertible", "blueColor"]
 - !private ["PSs23CustomStringConvertible", "borderColor"]
 - !private ["PSs23CustomStringConvertible", "borderWidth"]
 - ["PSs23CustomStringConvertible", "buttonsPanel"]
 - ["PSs23CustomStringConvertible", "choosePhotoButton"]
+- !private ["PSs23CustomStringConvertible", "clipsToBounds"]
+- !private ["PSs23CustomStringConvertible", "cornerRadius"]
 - !private ["PSs23CustomStringConvertible", "delegate"]
 - !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
 - !private ["PSs23CustomStringConvertible", "grayColor"]
@@ -311,10 +322,13 @@ depends-member:
 - !private ["PSs9Equatable", "allowsEditing"]
 - !private ["PSs9Equatable", "backgroundColor"]
 - !private ["PSs9Equatable", "blackColor"]
+- !private ["PSs9Equatable", "blueColor"]
 - !private ["PSs9Equatable", "borderColor"]
 - !private ["PSs9Equatable", "borderWidth"]
 - ["PSs9Equatable", "buttonsPanel"]
 - ["PSs9Equatable", "choosePhotoButton"]
+- !private ["PSs9Equatable", "clipsToBounds"]
+- !private ["PSs9Equatable", "cornerRadius"]
 - !private ["PSs9Equatable", "delegate"]
 - !private ["PSs9Equatable", "dismissViewControllerAnimated"]
 - !private ["PSs9Equatable", "grayColor"]
@@ -378,10 +392,13 @@ depends-member:
 - !private ["PSs8Hashable", "allowsEditing"]
 - !private ["PSs8Hashable", "backgroundColor"]
 - !private ["PSs8Hashable", "blackColor"]
+- !private ["PSs8Hashable", "blueColor"]
 - !private ["PSs8Hashable", "borderColor"]
 - !private ["PSs8Hashable", "borderWidth"]
 - ["PSs8Hashable", "buttonsPanel"]
 - ["PSs8Hashable", "choosePhotoButton"]
+- !private ["PSs8Hashable", "clipsToBounds"]
+- !private ["PSs8Hashable", "cornerRadius"]
 - !private ["PSs8Hashable", "delegate"]
 - !private ["PSs8Hashable", "dismissViewControllerAnimated"]
 - !private ["PSs8Hashable", "grayColor"]
@@ -440,10 +457,13 @@ depends-member:
 - !private ["PSo8NSCoding", "allowsEditing"]
 - !private ["PSo8NSCoding", "backgroundColor"]
 - !private ["PSo8NSCoding", "blackColor"]
+- !private ["PSo8NSCoding", "blueColor"]
 - !private ["PSo8NSCoding", "borderColor"]
 - !private ["PSo8NSCoding", "borderWidth"]
 - ["PSo8NSCoding", "buttonsPanel"]
 - ["PSo8NSCoding", "choosePhotoButton"]
+- !private ["PSo8NSCoding", "clipsToBounds"]
+- !private ["PSo8NSCoding", "cornerRadius"]
 - !private ["PSo8NSCoding", "delegate"]
 - !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - !private ["PSo8NSCoding", "grayColor"]
@@ -471,6 +491,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
 - !private ["PSo9NSCopying", "blackColor"]
+- !private ["PSo9NSCopying", "blueColor"]
 - !private ["PSo9NSCopying", "grayColor"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "NSLayoutAttribute"]
@@ -549,10 +570,13 @@ depends-member:
 - !private ["CSo8NSObject", "allowsEditing"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - !private ["CSo8NSObject", "blackColor"]
+- !private ["CSo8NSObject", "blueColor"]
 - !private ["CSo8NSObject", "borderColor"]
 - !private ["CSo8NSObject", "borderWidth"]
 - ["CSo8NSObject", "buttonsPanel"]
 - ["CSo8NSObject", "choosePhotoButton"]
+- !private ["CSo8NSObject", "clipsToBounds"]
+- !private ["CSo8NSObject", "cornerRadius"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - !private ["CSo8NSObject", "grayColor"]
@@ -601,10 +625,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "allowsEditing"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - !private ["PSo16NSObjectProtocol", "blackColor"]
+- !private ["PSo16NSObjectProtocol", "blueColor"]
 - !private ["PSo16NSObjectProtocol", "borderColor"]
 - !private ["PSo16NSObjectProtocol", "borderWidth"]
 - ["PSo16NSObjectProtocol", "buttonsPanel"]
 - ["PSo16NSObjectProtocol", "choosePhotoButton"]
+- !private ["PSo16NSObjectProtocol", "clipsToBounds"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "grayColor"]
@@ -632,6 +659,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CGColor"]
 - !private ["PSo14NSSecureCoding", "blackColor"]
+- !private ["PSo14NSSecureCoding", "blueColor"]
 - !private ["PSo14NSSecureCoding", "grayColor"]
 - !private ["PSs13OptionSetType", "Normal"]
 - !private ["PSs13OptionSetType", "TouchUpInside"]
@@ -669,6 +697,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "addSubview"]
 - !private ["PSo29UIAccessibilityIdentification", "addTarget"]
 - !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "clipsToBounds"]
 - !private ["PSo29UIAccessibilityIdentification", "image"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "layer"]
@@ -683,6 +712,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "addSubview"]
 - !private ["PSo12UIAppearance", "addTarget"]
 - !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "clipsToBounds"]
 - !private ["PSo12UIAppearance", "image"]
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "layer"]
@@ -712,6 +742,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "backgroundColor"]
 - ["PSo21UIAppearanceContainer", "buttonsPanel"]
 - ["PSo21UIAppearanceContainer", "choosePhotoButton"]
+- !private ["PSo21UIAppearanceContainer", "clipsToBounds"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - !private ["PSo21UIAppearanceContainer", "image"]
@@ -744,6 +775,7 @@ depends-member:
 - !private ["OSC12UIButtonType", "RoundedRect"]
 - !private ["CSo7UIColor", "CGColor"]
 - !private ["CSo7UIColor", "blackColor"]
+- !private ["CSo7UIColor", "blueColor"]
 - !private ["CSo7UIColor", "grayColor"]
 - !private ["PSo18UIContentContainer", "NSLayoutAttribute"]
 - !private ["PSo18UIContentContainer", "NSLayoutConstraint"]
@@ -796,6 +828,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "addSubview"]
 - !private ["PSo17UICoordinateSpace", "addTarget"]
 - !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "clipsToBounds"]
 - !private ["PSo17UICoordinateSpace", "image"]
 - !private ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo17UICoordinateSpace", "layer"]
@@ -805,6 +838,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "addSubview"]
 - !private ["PSo13UIDynamicItem", "addTarget"]
 - !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "clipsToBounds"]
 - !private ["PSo13UIDynamicItem", "image"]
 - !private ["PSo13UIDynamicItem", "init"]
 - !private ["PSo13UIDynamicItem", "layer"]
@@ -834,6 +868,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "backgroundColor"]
 - ["PSo18UIFocusEnvironment", "buttonsPanel"]
 - ["PSo18UIFocusEnvironment", "choosePhotoButton"]
+- !private ["PSo18UIFocusEnvironment", "clipsToBounds"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - !private ["PSo18UIFocusEnvironment", "image"]
@@ -895,8 +930,10 @@ depends-member:
 - ["PSo31UIImagePickerControllerDelegate", ""]
 - !private ["OSC33UIImagePickerControllerSourceType", "Camera"]
 - !private ["OSC33UIImagePickerControllerSourceType", "PhotoLibrary"]
+- !private ["CSo11UIImageView", "clipsToBounds"]
 - !private ["CSo11UIImageView", "image"]
 - !private ["CSo11UIImageView", "init"]
+- !private ["CSo11UIImageView", "layer"]
 - !private ["CSo11UIImageView", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["CSo22UINavigationController", "allowsEditing"]
 - !private ["CSo22UINavigationController", "delegate"]
@@ -961,6 +998,7 @@ depends-member:
 - !private ["CSo11UIResponder", "backgroundColor"]
 - ["CSo11UIResponder", "buttonsPanel"]
 - ["CSo11UIResponder", "choosePhotoButton"]
+- !private ["CSo11UIResponder", "clipsToBounds"]
 - !private ["CSo11UIResponder", "delegate"]
 - !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - !private ["CSo11UIResponder", "image"]
@@ -1048,6 +1086,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "backgroundColor"]
 - ["PSo18UITraitEnvironment", "buttonsPanel"]
 - ["PSo18UITraitEnvironment", "choosePhotoButton"]
+- !private ["PSo18UITraitEnvironment", "clipsToBounds"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - !private ["PSo18UITraitEnvironment", "image"]
@@ -1076,6 +1115,7 @@ depends-member:
 - !private ["CSo6UIView", "addSubview"]
 - !private ["CSo6UIView", "addTarget"]
 - !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "clipsToBounds"]
 - !private ["CSo6UIView", "image"]
 - !private ["CSo6UIView", "init"]
 - !private ["CSo6UIView", "layer"]
@@ -1128,6 +1168,7 @@ depends-member:
 - !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs24_ColorLiteralConvertible", "CGColor"]
 - !private ["PSs24_ColorLiteralConvertible", "blackColor"]
+- !private ["PSs24_ColorLiteralConvertible", "blueColor"]
 - !private ["PSs24_ColorLiteralConvertible", "grayColor"]
 - !private ["PSs21_ObjectiveCBridgeable", "Index"]
 - !private ["PSs21_ObjectiveCBridgeable", "Key"]
@@ -1142,6 +1183,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "addSubview"]
 - !private ["PSs12_Reflectable", "addTarget"]
 - !private ["PSs12_Reflectable", "backgroundColor"]
+- !private ["PSs12_Reflectable", "clipsToBounds"]
 - !private ["PSs12_Reflectable", "image"]
 - !private ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "layer"]

@@ -59,10 +59,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     private func setupConstraints() {
         let views = ["takePhotoButton": self.takePhotoButton, "choosePhotoButton": self.choosePhotoButton]
         
-        self.view.addConstraint(NSLayoutConstraint(item: self.showImageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Width, multiplier: 1.0, constant: 0))
-        
-        self.view.addConstraint(NSLayoutConstraint(item: self.showImageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Height, multiplier: 0.8, constant: 0))
-        
+        self.view.addConstraint(NSLayoutConstraint(item: self.showImageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 200))
+        self.view.addConstraint(NSLayoutConstraint(item: self.showImageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 200))
+
+        self.view.addConstraint(NSLayoutConstraint(item: self.showImageView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 100))
+        self.view.addConstraint(NSLayoutConstraint(item: self.showImageView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0))
         
         self.view.addConstraint(NSLayoutConstraint(item: self.takePhotoButton, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.buttonsPanel, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0))
         self.view.addConstraint(NSLayoutConstraint(item: self.takePhotoButton, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.buttonsPanel, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 10))
@@ -88,6 +89,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let chosenImage = editingInfo![UIImagePickerControllerOriginalImage] as! UIImage
         self.showImageView.image = chosenImage
+        self.showImageView.layer.cornerRadius = self.showImageView.frame.size.width / 2
+//        self.showImageView.layer.cornerRadius = 10.0
+        self.showImageView.clipsToBounds = true
+        self.showImageView.layer.borderWidth = 1.0
+        self.showImageView.layer.borderColor = UIColor.blueColor().CGColor
         
         picker.dismissViewControllerAnimated(true, completion: nil)
         
